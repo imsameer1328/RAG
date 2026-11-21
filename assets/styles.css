@@ -1,0 +1,123 @@
+/* DocuMind AI — Knowledge Atelier · no sidebar */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+:root {
+  --paper: #f7f8fc;
+  --ink: #141a30;
+  --muted: #747c95;
+  --brand: #6557eb;
+  --line: #e6e8f2;
+  --teal: #14b79d;
+}
+html, body, [data-testid="stAppViewContainer"] {font-family:'DM Sans',sans-serif!important;}
+[data-testid="stAppViewContainer"] {
+  background: radial-gradient(ellipse 68% 38% at 98% -10%, #e8e7fc 0%, transparent 74%), var(--paper);
+}
+[data-testid="stHeader"] {background: transparent;}
+[data-testid="stSidebar"], [data-testid="collapsedControl"] {display:none !important;}
+.block-container {max-width:1130px; padding-top:1.15rem; padding-bottom:3rem;}
+h1,h2,h3 {font-family:'Plus Jakarta Sans',sans-serif!important; letter-spacing:-.035em;}
+
+/* Custom brand bar */
+.dm-topbar {display:flex; align-items:center; justify-content:space-between; gap:20px; padding:10px 1px 27px; border-bottom:1px solid #e8ebf2; margin-bottom:25px;}
+.dm-brand {display:flex; align-items:center; gap:11px; min-width:0;}
+.dm-brand-mark {display:grid; place-items:center; width:38px; height:38px; background: #6254e8; color:white; font-size:24px; border-radius:12px; box-shadow:0 8px 21px #6557eb2c;}
+.dm-brand-name {font-family:'Plus Jakarta Sans',sans-serif; font-weight:800; color:#1b1e37; font-size:1.19rem; letter-spacing:-.052em; white-space:nowrap;}
+.dm-brand-ai {color:#6557eb;}
+.dm-brand-sub {color:#a1a5b8; font-size:.64rem; font-weight:800; letter-spacing:.12em; padding-left:10px; border-left:1px solid #d9dce7; white-space:nowrap;}
+.dm-topbar-right {display:flex; align-items:center; gap:14px;}
+.dm-engine-tag {font-size:.61rem; font-weight:800; letter-spacing:.135em; color:#868da4; white-space:nowrap;}
+.dm-connection {display:flex; align-items:center; gap:8px; font-size:.60rem; font-weight:800; letter-spacing:.09em; color:#497766; padding:9px 12px; background:#e9f8f0; border:1px solid #d9f0e4; border-radius:99px; white-space:nowrap;}
+.dm-connection i,.dm-live-dot {display:inline-block; width:7px; height:7px; background:#20b88f; border-radius:100px; box-shadow:0 0 0 4px #2ebd8f1d;}
+
+/* Hero: editorial left content, art on right */
+.dm-hero {display:grid; grid-template-columns:minmax(0,1.55fr) minmax(200px,.9fr); gap:20px; position:relative; overflow:hidden; background:linear-gradient(118deg,#171b37 2%,#262452 53%,#38397d 100%); min-height:300px; border-radius:23px; padding:39px 42px 31px; box-shadow:0 18px 33px #30326718; margin:0 0 32px;}
+.dm-hero::before {content:''; position:absolute; inset:0; pointer-events:none; opacity:.22; background-image: radial-gradient(#b4b1fa 0.8px,transparent 0.8px); background-size:17px 17px; mask-image:linear-gradient(90deg,transparent 33%,black 100%);}
+.dm-hero-copy {position:relative; z-index:2;}
+.dm-overline {font-size:.61rem; font-weight:800; color:#a9a5fe; letter-spacing:.20em; margin-bottom:19px;}
+.dm-hero h1 {color:#fff!important; font-family:'Plus Jakarta Sans',sans-serif; font-size:clamp(2.15rem,4vw,3.5rem); font-weight:800; letter-spacing:-.065em; line-height:1.13; margin:0 0 17px;}
+.dm-hero h1 em {font-style:normal; color:#b7b0ff;}
+.dm-hero p {max-width:495px; color:#ccd0ee; font-size:.89rem; line-height:1.74; margin:0 0 22px;}
+.dm-hero-tags {display:flex; flex-wrap:wrap; gap:8px;}
+.dm-hero-tags span {display:inline-block; border:1px solid #ffffff28; background:#ffffff0c; padding:8px 10px; border-radius:7px; color:#e0dfff; font-size:.60rem; font-weight:750; letter-spacing:.12em;}
+.dm-hero-art {position:relative; min-height:220px; display:grid; place-items:center;}
+.dm-orbit {position:absolute; border:1px solid #b0abf460; border-radius:50%; transform:rotate(-21deg);}
+.dm-orbit-one {width:210px; height:210px; box-shadow:0 0 0 25px #8989ec0b, 0 0 0 50px #8989ec08;}
+.dm-orbit-two {width:290px; height:145px; transform:rotate(33deg); border-color:#a3a1df66;}
+.dm-art-core {position:relative; z-index:2; display:grid; place-items:center; width:92px; height:92px; color:white; font-size:47px; border-radius:25px; transform:rotate(-11deg); background:linear-gradient(145deg,#7469ff,#8e80fa); box-shadow:0 24px 53px #0b0b3280,inset 0 1px 0 #ffffff7a;}
+.dm-art-label {position:absolute; z-index:3; font-size:.67rem; letter-spacing:.08em; color:#fff; background:#383765; border:1px solid #9591d85f; padding:10px 12px; border-radius:9px; box-shadow:0 9px 16px #16153b50;}
+.dm-art-label-a {top:22px; right:2%;}
+.dm-art-label-b {left:1%; bottom:38px;}
+.dm-art-label-c {right:0; bottom:17px;}
+
+/* Section titles */
+.dm-section-title {display:flex; justify-content:space-between; align-items:end; gap:24px; margin:5px 1px 14px;}
+.dm-section-index {font-size:.59rem; letter-spacing:.20em; color:#8073de; font-weight:800; margin-bottom:7px;}
+.dm-section-title h2 {font-size:1.40rem; color:#1c2340; margin:0; letter-spacing:-.045em; font-weight:800;}
+.dm-section-title p {font-size:.81rem; margin:0 0 2px; color:#8a92a6;}
+
+/* Native Streamlit form panel */
+[data-testid="stVerticalBlockBorderWrapper"] {border-color:#e2e6f1!important; background:white; border-radius:17px!important; box-shadow:0 7px 28px #2c3c7010;}
+[data-testid="stForm"] {border:0!important; padding:0!important;}
+[data-testid="stWidgetLabel"] p {font-size:.80rem!important; font-weight:700!important; color:#505a79!important;}
+.stTextInput input, [data-baseweb="select"]>div {border-radius:10px!important; background:#fbfcff!important; border-color:#e4e7f1!important; min-height:45px!important;}
+.stTextInput input:focus {border-color:#9189ed!important; box-shadow:0 0 0 2px #786bec16!important;}
+button[kind="primary"] {background:linear-gradient(105deg,#6557eb,#5147cb)!important; color:white!important; border:0!important; box-shadow:0 7px 16px #6356ea33!important; border-radius:10px!important; min-height:43px; font-weight:750;}
+button[kind="primary"]:hover {background:linear-gradient(105deg,#7365f4,#5950da)!important; box-shadow:0 9px 18px #6356ea45!important;}
+button {transition:box-shadow .15s ease, transform .15s ease;}
+button:hover {transform:translateY(-1px);}
+.stCaption {color:#9299ac;}
+
+/* Connected knowledge strip */
+.dm-source-status {margin:15px 0 32px; background:#f0fbf7; border:1px solid #d6f1e7; border-radius:13px; padding:15px 17px; display:flex; gap:17px; align-items:center;}
+.dm-source-text {display:flex; flex:1; min-width:0; flex-direction:column;}
+.dm-source-text strong {color:#225848; font-size:.85rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+.dm-source-text small {color:#80a294; font-size:.69rem; margin-top:3px;}
+.dm-source-number {display:flex; flex-direction:column; align-items:center; padding:0 18px; border-left:1px solid #cbe7db;}
+.dm-source-number strong {color:#24634f; font-size:1.04rem; line-height:1.2;}
+.dm-source-number small {color:#7a9d8c; font-size:.54rem; letter-spacing:.15em; font-weight:800; padding-top:3px;}
+.dm-source-ready {font-size:.62rem; color:#318167; font-weight:800; letter-spacing:.07em; white-space:nowrap;}
+.dm-source-empty {margin:15px 0 32px; background:#fff; border:1px dashed #d7dbee; border-radius:12px; padding:14px 18px; display:flex; align-items:center; gap:11px; color:#8991a9; font-size:.82rem;}
+.dm-source-empty-icon {font-size:20px; color:#9184ec;}
+
+/* Research space */
+.dm-chat-title {margin-top:10px;}
+.st-key-clear_chat button {border:1px solid #dfe2ed; border-radius:9px; color:#666d88; font-size:.75rem; min-height:34px;}
+.dm-welcome-chat {text-align:center; background:white; border:1px solid #e6e7f2; border-radius:20px; padding:32px 15px 16px; margin:1px 0 10px;}
+.dm-welcome-icon,.dm-empty-symbol {display:grid; place-items:center; width:54px; height:54px; border-radius:16px; margin:0 auto 12px; font-size:25px; color:#6557eb; background:#eeedff;}
+.dm-welcome-chat h3,.dm-empty-chat h3 {font-weight:800; color:#252947; font-size:1.17rem; margin:0 0 7px;}
+.dm-welcome-chat p,.dm-empty-chat p {color:#8b94aa; margin:0 auto; font-size:.82rem; max-width:490px; line-height:1.7;}
+.dm-empty-chat {background:#fff; border:1px solid #e4e8f2; border-radius:19px; text-align:center; padding:65px 20px; min-height:265px;}
+.dm-empty-steps {display:flex; justify-content:center; gap:10px; margin-top:20px; flex-wrap:wrap;}
+.dm-empty-steps span {font-size:.71rem; color:#7568ca; background:#f1efff; padding:8px 13px; border-radius:100px; font-weight:700;}
+.st-key-sample_1 button,.st-key-sample_2 button,.st-key-sample_3 button {border:1px solid #e4e6f0; border-radius:11px; background:white; font-size:.74rem; color:#58617d; padding:11px 6px; min-height:53px; white-space:normal;}
+.st-key-sample_1 button:hover,.st-key-sample_2 button:hover,.st-key-sample_3 button:hover {border-color:#a69ff0; color:#6154db; background:#fafaff;}
+[data-testid="stChatMessage"] {border:1px solid #e6e8f1; border-radius:16px; background:#fff; padding:17px 18px; box-shadow:0 5px 17px #21335f0a;}
+[data-testid="stChatMessage"]+ [data-testid="stChatMessage"] {margin-top:10px;}
+[data-testid="stChatInput"] {border:1px solid #dedff0; background:#fff; border-radius:16px; box-shadow:0 10px 23px #25305c17;}
+[data-testid="stExpander"] {border:1px solid #e7e9f3; border-radius:11px; background:#fcfcff;}
+[data-testid="stAlert"] {border-radius:11px;}
+
+.dm-footer {display:flex; justify-content:space-between; align-items:center; gap:15px; margin-top:39px; padding-top:20px; border-top:1px solid #e6e9f1; color:#9ca3b6; font-size:.60rem; letter-spacing:.08em;}
+.dm-footer strong {color:#656d8a;}
+.dm-footer span {padding:0 6px;}
+
+@media(max-width:900px) {
+  .dm-hero {grid-template-columns:1fr; padding:31px 28px;}
+  .dm-hero-art {display:none;}
+  .dm-topbar-right .dm-engine-tag {display:none;}
+  .dm-source-ready {display:none;}
+}
+@media(max-width:600px) {
+  .block-container {padding-top:.75rem; padding-left:.95rem; padding-right:.95rem;}
+  .dm-topbar {padding-bottom:15px;}
+  .dm-brand-sub {display:none;}
+  .dm-hero h1 {font-size:2.1rem;}
+  .dm-hero {min-height:auto; padding:29px 22px; border-radius:17px; margin-bottom:25px;}
+  .dm-section-title {display:block;}
+  .dm-section-title p {margin-top:7px;}
+  .dm-source-number {padding:0 8px;}
+  .dm-source-status {gap:9px; padding:13px 10px;}
+  .dm-source-text strong {max-width:150px;}
+  .dm-connection {font-size:.54rem; padding:7px 9px;}
+  .dm-footer {display:block; line-height:2;}
+}
